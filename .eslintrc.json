@@ -1,6 +1,7 @@
 {
   "root": true,
   "ignorePatterns": ["projects/**/*"],
+  "plugins": ["jsx-a11y"],
   "overrides": [
     {
       "files": ["*.ts"],
@@ -9,6 +10,9 @@
         "plugin:@typescript-eslint/recommended",
         "plugin:@angular-eslint/recommended",
         "plugin:@angular-eslint/template/process-inline-templates",
+        "plugin:jsx-a11y/recommended",
+        "plugin:sonarjs/recommended",
+        "plugin:security/recommended",
         "plugin:prettier/recommended"
       ],
       "rules": {
