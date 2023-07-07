@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { RestaurantPageComponent } from './restaurant-page/restaurant-page.component';
 import { GiftCardsComponent } from './gift-cards/gift-cards.component';
 import { MenusComponent } from './menus/menus.component';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { MenusComponent } from './menus/menus.component';
     RestaurantPageComponent,
     GiftCardsComponent,
     MenusComponent,
+    DetailsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, LayoutModule],
   providers: [],
