@@ -24,6 +24,12 @@
             "style": "camelCase"
           }
         ],
+        "@typescript-eslint/no-empty-function": [
+          "error",
+          {
+            "allow": ["constructors"]
+          }
+        ],
         "@angular-eslint/component-selector": [
           "error",
           {
