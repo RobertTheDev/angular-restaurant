@@ -20,10 +20,7 @@ export class ContentfulService {
     return res.items;
   }
 
-  async getRestaurantPage(): Promise<Entry[]> {
-    const res = await this.cdaClient.getEntries({
-      content_type: 'theRestaurant',
-    });
-    return res.items;
+  async getRestaurantPage(): Promise<Entry> {
+    return await this.cdaClient.getEntry('50p8gWOfatQ7XKzXTVZ8j9');
   }
 }
