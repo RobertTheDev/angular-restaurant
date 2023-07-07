@@ -3,15 +3,15 @@ import { Component } from '@angular/core';
 const headerLinks = [
   {
     href: '/',
-    name: 'The Bar',
-  },
-  {
-    href: '/',
-    name: 'Gallery',
-  },
-  {
-    href: '/',
     name: 'Home',
+  },
+  {
+    href: '/',
+    name: 'The Restaurant',
+  },
+  {
+    href: '/',
+    name: 'Our Menu',
   },
   {
     href: '/',
@@ -23,15 +23,7 @@ const headerLinks = [
   },
   {
     href: '/',
-    name: 'Menus',
-  },
-  {
-    href: '/',
     name: 'Ticketed Events',
-  },
-  {
-    href: '/',
-    name: 'Private Dining',
   },
   {
     href: '/',
