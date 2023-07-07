@@ -19,4 +19,11 @@ export class ContentfulService {
     });
     return res.items;
   }
+
+  async getRestaurantPage(): Promise<Entry[]> {
+    const res = await this.cdaClient.getEntries({
+      content_type: 'theRestaurant',
+    });
+    return res.items;
+  }
 }
