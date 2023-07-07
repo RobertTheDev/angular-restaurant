@@ -1,7 +1,9 @@
 <header class="header-container">
+  <p>Logi</p>
   <ul class="header-link-group">
     <li *ngFor="let headerLink of headerLinks">
       <a :routerLink="headerLink.href"> {{ headerLink.name }}</a>
     </li>
   </ul>
+  <button>Find Reservation</button>
 </header>
