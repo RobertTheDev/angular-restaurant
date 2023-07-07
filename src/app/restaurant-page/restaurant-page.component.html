@@ -1,1 +1,2 @@
-<p>restaurant-page works!</p>
+<img *ngFor="let image of images" src="{{ image.fields.file.url }}" />
+<div [innerHtml]="content"></div>
