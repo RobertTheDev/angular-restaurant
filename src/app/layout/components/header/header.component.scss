@@ -7,4 +7,12 @@
     top: 0px;
     width: 100%;
   }
+  &-link {
+    &-group {
+      align-items: center;
+      display: flex;
+      gap: 2rem;
+      height: 100%;
+    }
+  }
 }
