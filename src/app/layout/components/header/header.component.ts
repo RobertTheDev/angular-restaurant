@@ -46,4 +46,6 @@ const headerLinks = [
 })
 export class HeaderComponent {
   headerLinks = headerLinks;
+
+  constructor() {}
 }
