@@ -14,7 +14,9 @@ export class ContentfulService {
   });
 
   async getAllEntries(): Promise<Entry[]> {
-    const res = await this.cdaClient.getEntries();
+    const res = await this.cdaClient.getEntries({
+      content_type: 'menuItem',
+    });
     return res.items;
   }
 }
