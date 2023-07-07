@@ -6,9 +6,15 @@ import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
 import { MenuItemsListComponent } from './menu-items-list/menu-items-list.component';
 import { HomeComponent } from './home/home.component';
+import { RestaurantPageComponent } from './restaurant-page/restaurant-page.component';
 
 @NgModule({
-  declarations: [AppComponent, MenuItemsListComponent, HomeComponent],
+  declarations: [
+    AppComponent,
+    MenuItemsListComponent,
+    HomeComponent,
+    RestaurantPageComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, LayoutModule],
   providers: [],
   bootstrap: [AppComponent],
