@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { createClient } from 'contentful';
-import { from } from 'rxjs';
+import { Entry, createClient } from 'contentful';
 import { environment } from './environments/environment';
 
 @Injectable({
@@ -9,25 +8,13 @@ import { environment } from './environments/environment';
 export class ContentfulService {
   constructor() {}
 
-  private client = createClient({
+  private cdaClient = createClient({
     space: environment.spaceId,
-    accessToken: environment.spaceId,
+    accessToken: environment.accessToken,
   });
 
-  getAllEntries() {
-    const promise = this.client.getEntries();
-    return from(promise);
-  }
-
-  getEntryById(id: string) {
-    const promise = this.client.getEntry(id);
-    return from(promise);
-  }
-
-  getEntryByField() {
-    const promise = this.client.getEntries({
-      content_type: 'aboutPage',
-    });
-    return from(promise);
+  async getAllEntries(): Promise<Entry[]> {
+    const res = await this.cdaClient.getEntries();
+    return res.items;
   }
 }
