@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { MenusComponent } from './menus/menus.component';
-import { DetailsComponent } from './details/details.component';
-import { GiftCardsComponent } from './gift-cards/gift-cards.component';
-import { AboutComponent } from './about/about.component';
-import { EventsComponent } from './events/events.component';
-import { EventComponent } from './event/components/events/event.component';
-import { RestaurantComponent } from './restaurant/restaurant.component';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { HomeComponent } from './features/home/home.component';
+import { MenusComponent } from './features/menus/menus.component';
+import { DetailsComponent } from './features/details/details.component';
+import { GiftCardsComponent } from './features/gift-cards/gift-cards.component';
+import { AboutComponent } from './features/about/about.component';
+import { EventsComponent } from './features/events/events.component';
+import { EventComponent } from './features/event/components/events/event.component';
+import { RestaurantComponent } from './features/restaurant/restaurant.component';
+import { NotFoundComponent } from './features/not-found/not-found.component';
 
 const routes: Routes = [
   {
