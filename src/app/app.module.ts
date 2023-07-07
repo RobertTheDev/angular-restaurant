@@ -8,6 +8,7 @@ import { MenuItemsListComponent } from './menu-items-list/menu-items-list.compon
 import { HomeComponent } from './home/home.component';
 import { RestaurantPageComponent } from './restaurant-page/restaurant-page.component';
 import { GiftCardsComponent } from './gift-cards/gift-cards.component';
+import { MenusComponent } from './menus/menus.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { GiftCardsComponent } from './gift-cards/gift-cards.component';
     HomeComponent,
     RestaurantPageComponent,
     GiftCardsComponent,
+    MenusComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, LayoutModule],
   providers: [],
