@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { createClient } from 'contentful';
 import { from } from 'rxjs';
-import { environment } from 'src/app/environments/environement';
+import { environment } from './environments/environment';
 
 @Injectable({
   providedIn: 'root',
