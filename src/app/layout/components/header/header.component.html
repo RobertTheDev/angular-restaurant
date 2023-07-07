@@ -1,3 +1,7 @@
 <header class="header-container">
-  <p>header</p>
+  <ul class="header-link-group">
+    <li *ngFor="let headerLink of headerLinks">
+      <a :routerLink="headerLink.href"> {{ headerLink.name }}</a>
+    </li>
+  </ul>
 </header>
