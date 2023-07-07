@@ -6,27 +6,27 @@ const headerLinks = [
     name: 'Home',
   },
   {
-    href: '/',
+    href: '/restaurant',
     name: 'The Restaurant',
   },
   {
-    href: '/',
-    name: 'Our Menu',
+    href: '/menus',
+    name: 'Menus',
   },
   {
-    href: '/',
+    href: '/about',
     name: 'About',
   },
   {
-    href: '/',
+    href: '/details',
     name: 'Need To Know',
   },
   {
-    href: '/',
+    href: '/events',
     name: 'Ticketed Events',
   },
   {
-    href: '/',
+    href: '/gift-cards',
     name: 'Gift Cards',
   },
 ];
