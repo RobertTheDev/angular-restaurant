@@ -10,6 +10,7 @@ import { RestaurantPageComponent } from './restaurant-page/restaurant-page.compo
 import { GiftCardsComponent } from './gift-cards/gift-cards.component';
 import { MenusComponent } from './menus/menus.component';
 import { DetailsComponent } from './details/details.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { DetailsComponent } from './details/details.component';
     GiftCardsComponent,
     MenusComponent,
     DetailsComponent,
+    AboutComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, LayoutModule],
   providers: [],
