@@ -1,5 +1,5 @@
 export default interface MenuItem {
-  name: string;
+  title: string;
   description: string;
   number: number;
   category: string;
