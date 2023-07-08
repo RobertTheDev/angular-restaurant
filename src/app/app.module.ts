@@ -28,7 +28,12 @@ import { TestimonialCardComponent } from './testimonial-card/testimonial-card.co
     NotFoundComponent,
     TestimonialCardComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, LayoutModule, EventsModule],
+  imports: [
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    AppRoutingModule,
+    LayoutModule,
+    EventsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
