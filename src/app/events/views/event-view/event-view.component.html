@@ -3,7 +3,16 @@
   <div>
     <button (click)="goBack()">Back</button>
   </div>
-  <app-event-images />
-  <app-event-description />
-  <app-purchase-ticket-form />
+  <div *ngIf="!event">
+    <p>No event found</p>
+  </div>
+  <div *ngIf="event">
+    <p>{{ event.title }}</p>
+    <div *ngFor="let image of event.images">
+      <img [src]="image.uri" [alt]="image.alt" />
+    </div>
+    <app-event-images />
+    <app-event-description />
+    <app-purchase-ticket-form />
+  </div>
 </div>
