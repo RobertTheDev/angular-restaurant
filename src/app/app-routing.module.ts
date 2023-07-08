@@ -5,10 +5,10 @@ import { MenusComponent } from './features/menus/menus.component';
 import { DetailsComponent } from './features/details/details.component';
 import { GiftCardsComponent } from './features/gift-cards/gift-cards.component';
 import { AboutComponent } from './features/about/about.component';
-import { EventsComponent } from './features/events/events.component';
-import { EventComponent } from './features/event/components/events/event.component';
 import { RestaurantComponent } from './features/restaurant/restaurant.component';
 import { NotFoundComponent } from './features/not-found/not-found.component';
+import { EventsViewComponent } from './events/views/events-view/events-view.component';
+import { EventViewComponent } from './events/views/event-view/event-view.component';
 
 const routes: Routes = [
   {
@@ -28,11 +28,11 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: EventsComponent,
+        component: EventsViewComponent,
       },
       {
-        path: ':id',
-        component: EventComponent,
+        path: ':slug',
+        component: EventViewComponent,
       },
     ],
   },
