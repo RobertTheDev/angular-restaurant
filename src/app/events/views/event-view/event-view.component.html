@@ -7,12 +7,7 @@
     <p>No event found</p>
   </div>
   <div *ngIf="event">
-    <p>{{ event.title }}</p>
-    <div *ngFor="let image of event.images">
-      <img [src]="image.uri" [alt]="image.alt" />
-    </div>
-    <app-event-images />
-    <app-event-description />
+    <app-event-detail [event]="event" />
     <app-purchase-ticket-form />
   </div>
 </div>
