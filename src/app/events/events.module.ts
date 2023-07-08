@@ -5,8 +5,7 @@ import { EventViewComponent } from './views/event-view/event-view.component';
 import { RouterModule } from '@angular/router';
 import { PurchaseTicketFormComponent } from './components/purchase-ticket-form/purchase-ticket-form.component';
 import { EventCardComponent } from './components/event-card/event-card.component';
-import { EventImagesComponent } from './components/event-images/event-images.component';
-import { EventDescriptionComponent } from './components/event-description/event-description.component';
+import { EventDetailComponent } from './components/event-detail/event-detail.component';
 
 @NgModule({
   declarations: [
@@ -14,8 +13,7 @@ import { EventDescriptionComponent } from './components/event-description/event-
     EventViewComponent,
     PurchaseTicketFormComponent,
     EventCardComponent,
-    EventImagesComponent,
-    EventDescriptionComponent,
+    EventDetailComponent,
   ],
   imports: [CommonModule, RouterModule],
 })
