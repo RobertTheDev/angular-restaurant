@@ -1,0 +1,6 @@
+<div *ngIf="event">
+  <p>{{ event.title }}</p>
+  <div *ngFor="let image of event.images">
+    <img [src]="image.uri" [alt]="image.alt" />
+  </div>
+</div>
