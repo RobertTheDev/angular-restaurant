@@ -11,8 +11,8 @@ import { MenusComponent } from './features/menus/menus.component';
 import { DetailsComponent } from './features/details/details.component';
 import { AboutComponent } from './features/about/about.component';
 import { RestaurantComponent } from './features/restaurant/restaurant.component';
-import { EventModule } from './features/event/event.module';
 import { NotFoundComponent } from './features/not-found/not-found.component';
+import { EventsModule } from './events/events.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,7 @@ import { NotFoundComponent } from './features/not-found/not-found.component';
     RestaurantComponent,
     NotFoundComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, LayoutModule, EventModule],
+  imports: [BrowserModule, AppRoutingModule, LayoutModule, EventsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
