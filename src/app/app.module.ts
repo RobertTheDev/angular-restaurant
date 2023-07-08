@@ -13,6 +13,7 @@ import { AboutComponent } from './features/about/about.component';
 import { RestaurantComponent } from './features/restaurant/restaurant.component';
 import { NotFoundComponent } from './features/not-found/not-found.component';
 import { EventsModule } from './events/events.module';
+import { TestimonialCardComponent } from './testimonial-card/testimonial-card.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { EventsModule } from './events/events.module';
     AboutComponent,
     RestaurantComponent,
     NotFoundComponent,
+    TestimonialCardComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, LayoutModule, EventsModule],
   providers: [],
