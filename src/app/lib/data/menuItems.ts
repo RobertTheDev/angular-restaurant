@@ -2,7 +2,7 @@ import MenuItem from 'src/app/interfaces/MenuItem';
 
 const menuItems: MenuItem[] = [
   {
-    name: 'Roman Army Sourdough',
+    title: 'Roman Army Sourdough',
     description: 'sunflower spread, whipped lardo',
     number: 1,
     category: 'Dinner',
@@ -12,7 +12,7 @@ const menuItems: MenuItem[] = [
     },
   },
   {
-    name: 'Ice Cream',
+    title: 'Ice Cream',
     description: 'sunflower spread, whipped lardo',
     number: 13,
     category: 'Desert',
