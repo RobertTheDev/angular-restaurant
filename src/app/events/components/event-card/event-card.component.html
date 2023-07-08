@@ -1,7 +1,7 @@
 <a routerLink="{{ event.slug }}">
   <div>
     <div>
-      <img [src]="event.image.uri" [alt]="event.image.alt" />
+      <img [src]="event.images[0].uri" [alt]="event.images[0].alt" />
     </div>
     <div>
       <p>{{ event.title }}</p>

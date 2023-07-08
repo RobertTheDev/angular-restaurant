@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import EventCard from 'src/app/interfaces/events/EventCard';
+import Event from 'src/app/interfaces/events/Event';
 
 @Component({
   selector: 'app-event-card',
@@ -7,13 +7,11 @@ import EventCard from 'src/app/interfaces/events/EventCard';
   styleUrls: ['./event-card.component.scss'],
 })
 export class EventCardComponent {
-  @Input() event: EventCard = {
+  @Input() event: Event = {
     slug: '',
     title: '',
     subtitle: '',
-    image: {
-      uri: '',
-      alt: '',
-    },
+    description: '',
+    images: [],
   };
 }
