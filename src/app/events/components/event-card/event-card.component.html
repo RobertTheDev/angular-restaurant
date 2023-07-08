@@ -1,1 +1,11 @@
-<p>event-card works!</p>
+<a routerLink="{{ event.slug }}">
+  <div>
+    <div>
+      <img [src]="event.image.uri" [alt]="event.image.alt" />
+    </div>
+    <div>
+      <p>{{ event.title }}</p>
+      <p>{{ event.subtitle }}</p>
+    </div>
+  </div>
+</a>
