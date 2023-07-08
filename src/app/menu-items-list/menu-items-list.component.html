@@ -1,3 +1,14 @@
-<p *ngFor="let menuItem of menuItems">
-  {{ menuItem.fields.title }}
+<!-- DESCRIPTION -->
+<p>
+  The cheese cart at Francie offers up to twenty cheeses nightly. We highlight
+  cheeses from around the country, but are especially proud to feature cheeses
+  from the northeastern United States. Over the course of a year, you will see
+  dozens of selections from Vermont, Connecticut, New York, Pennsylvania,
+  Massachusetts, and many others. We balance our cart choices with local
+  favorites, worldly classics, adventurous flavors, and traditional crowd
+  pleasers. A nightly selection might include:
 </p>
+<!-- SNACKS SECTION -->
+<div *ngFor="let menuItem of menuItems">
+  <p>{{ menuItem.title }}</p>
+</div>
