@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UsersService } from '../users.service';
+import { UsersService } from '../../users.service';
 import User from 'src/app/interfaces/User';
 import { catchError, of, switchMap } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';

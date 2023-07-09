@@ -16,6 +16,7 @@ import { EventsModule } from './events/events.module';
 import { TestimonialCardComponent } from './testimonial-card/testimonial-card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UsersModule } from './users/users.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { UsersModule } from './users/users.module';
     EventsModule,
     HttpClientModule,
     UsersModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

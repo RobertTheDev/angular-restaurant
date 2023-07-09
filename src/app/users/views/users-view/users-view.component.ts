@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UsersService } from '../users.service';
+import { UsersService } from '../../users.service';
 import { catchError, of } from 'rxjs';
 import User from 'src/app/interfaces/User';
 
