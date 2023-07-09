@@ -1,16 +1,13 @@
+import { environment } from 'environments/environment';
 import { MongoClient } from 'mongodb';
 
-const connectionString = 'mongodb://localhost:27017/';
-const client = new MongoClient(connectionString);
+// // Connection URL
+const url = environment.mongoDBUrl;
+const client = new MongoClient(url);
 
-let conn;
-try {
-  conn = await client.connect();
-} catch (e) {
-  console.error(e);
-  process.exit(1); // Terminate the script if the connection fails
-}
+// // Database Name
+const dbName = 'Restaurant';
 
-const db = conn.db('Restaurant');
+const db = client.db(dbName);
 
 export default db;
