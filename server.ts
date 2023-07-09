@@ -28,6 +28,8 @@ export function app(): express.Express {
   server.set('view engine', 'html');
   server.set('views', distFolder);
 
+  server.use(express.json());
+
   server.use('/api/users', userRouter);
 
   // Serve static files from /browser
