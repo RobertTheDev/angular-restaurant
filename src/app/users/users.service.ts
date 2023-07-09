@@ -7,11 +7,15 @@ import User from '../interfaces/User';
   providedIn: 'root',
 })
 export class UsersService {
-  private url = 'http://localhost:4200/api/users';
+  private url = 'http://localhost:4200/api/users/';
 
   constructor(private http: HttpClient) {}
 
   getUsers(): Observable<User[]> {
     return this.http.get<User[]>(this.url);
+  }
+
+  getUserById(id: string): Observable<User> {
+    return this.http.get<User>(this.url + id);
   }
 }
