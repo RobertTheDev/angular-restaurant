@@ -1,5 +1,6 @@
 import { usersCollection } from 'db/mongodb';
 import * as express from 'express';
+import { StatusCodes } from 'http-status-codes';
 import { ObjectId } from 'mongodb';
 
 const deleteUserById: express.Handler = async (req, res) => {
@@ -7,10 +8,9 @@ const deleteUserById: express.Handler = async (req, res) => {
     const data = await usersCollection.findOneAndDelete({
       _id: new ObjectId(req.params['id']),
     });
-
-    res.send(data);
+    res.status(StatusCodes.ACCEPTED).send(data);
   } catch (error) {
-    res.send(error);
+    res.status(StatusCodes.INTERNAL_SERVER_ERROR).send(error);
   }
 };
 

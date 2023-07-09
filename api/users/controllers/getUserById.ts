@@ -1,5 +1,6 @@
 import { usersCollection } from 'db/mongodb';
 import * as express from 'express';
+import { StatusCodes } from 'http-status-codes';
 import { ObjectId } from 'mongodb';
 
 const getUserById: express.Handler = async (req, res) => {
@@ -8,11 +9,11 @@ const getUserById: express.Handler = async (req, res) => {
       _id: new ObjectId(req.params['id']),
     });
     if (!data) {
-      res.send(null);
+      res.status(StatusCodes.NOT_FOUND).send(null);
     }
-    res.send(data);
+    res.status(StatusCodes.OK).send(data);
   } catch (error) {
-    res.send(error);
+    res.status(StatusCodes.INTERNAL_SERVER_ERROR).send(error);
   }
 };
 

@@ -1,12 +1,13 @@
 import { usersCollection } from 'db/mongodb';
 import * as express from 'express';
+import { StatusCodes } from 'http-status-codes';
 
 const getUsers: express.Handler = async (_req, res) => {
   try {
-    const results = await usersCollection.find({}).toArray();
-    res.send(results);
+    const data = await usersCollection.find({}).toArray();
+    res.status(StatusCodes.OK).send(data);
   } catch (error) {
-    res.send(error);
+    res.status(StatusCodes.INTERNAL_SERVER_ERROR).send(error);
   }
 };
 
