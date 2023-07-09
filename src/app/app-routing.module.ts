@@ -9,6 +9,8 @@ import { RestaurantComponent } from './features/restaurant/restaurant.component'
 import { NotFoundComponent } from './features/not-found/not-found.component';
 import { EventsViewComponent } from './events/views/events-view/events-view.component';
 import { EventViewComponent } from './events/views/event-view/event-view.component';
+import { UsersViewComponent } from './users/users-view/users-view.component';
+import { UserViewComponent } from './users/user-view/user-view.component';
 
 const routes: Routes = [
   {
@@ -33,6 +35,19 @@ const routes: Routes = [
       {
         path: ':slug',
         component: EventViewComponent,
+      },
+    ],
+  },
+  {
+    path: 'users',
+    children: [
+      {
+        path: '',
+        component: UsersViewComponent,
+      },
+      {
+        path: ':id',
+        component: UserViewComponent,
       },
     ],
   },
