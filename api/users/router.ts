@@ -1,28 +1,29 @@
+import db from 'db/mongodb';
 import * as express from 'express';
+import { ObjectId } from 'mongodb';
 
 const userRouter = express.Router();
 
-const users = [
-  {
-    id: '1b',
-    firstName: 'David',
-    lastName: 'Owens',
-  },
-];
+const userCollection = db.collection('users');
 
-userRouter.get('/', (_req, res) => {
+userRouter.get('/', async (_req, res) => {
   try {
-    res.send(users);
+    const results = await userCollection.find({}).toArray();
+    res.send(results);
   } catch (error) {
     res.send(error);
   }
 });
 
-userRouter.get('/:id', (req, res) => {
+userRouter.get('/:id', async (req, res) => {
   try {
-    const user = users.find((props) => props.id === req.params.id);
-
-    res.send(user);
+    const data = await userCollection.findOne({
+      _id: new ObjectId(req.params.id),
+    });
+    if (!data) {
+      res.send(null);
+    }
+    res.send(data);
   } catch (error) {
     res.send(error);
   }
