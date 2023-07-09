@@ -10,4 +10,6 @@ const dbName = 'Restaurant';
 
 const db = client.db(dbName);
 
+export const usersCollection = db.collection('users');
+
 export default db;
