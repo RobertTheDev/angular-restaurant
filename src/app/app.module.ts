@@ -15,6 +15,7 @@ import { NotFoundComponent } from './features/not-found/not-found.component';
 import { EventsModule } from './events/events.module';
 import { TestimonialCardComponent } from './testimonial-card/testimonial-card.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UsersModule } from './users/users.module';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { HttpClientModule } from '@angular/common/http';
     LayoutModule,
     EventsModule,
     HttpClientModule,
+    UsersModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
