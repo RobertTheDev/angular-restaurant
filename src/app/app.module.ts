@@ -14,6 +14,7 @@ import { RestaurantComponent } from './features/restaurant/restaurant.component'
 import { NotFoundComponent } from './features/not-found/not-found.component';
 import { EventsModule } from './events/events.module';
 import { TestimonialCardComponent } from './testimonial-card/testimonial-card.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { TestimonialCardComponent } from './testimonial-card/testimonial-card.co
     AppRoutingModule,
     LayoutModule,
     EventsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
