@@ -1,3 +1,4 @@
 <div *ngFor="let user of users" [routerLink]="['/users', user._id]">
   <p>{{ user.firstName }}</p>
 </div>
+<app-create-user-form></app-create-user-form>
