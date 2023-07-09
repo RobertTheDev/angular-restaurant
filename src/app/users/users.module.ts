@@ -9,6 +9,7 @@ import { UpdateUserFormComponent } from './components/update-user-form/update-us
 import { UserDetailComponent } from './components/user-detail/user-detail.component';
 import { UpdateUserViewComponent } from './views/update-user-view/update-user-view.component';
 import { CreateUserViewComponent } from './views/create-user-view/create-user-view.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { CreateUserViewComponent } from './views/create-user-view/create-user-vi
     UpdateUserViewComponent,
     CreateUserViewComponent,
   ],
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, ReactiveFormsModule],
   providers: [UsersService],
 })
 export class UsersModule {}

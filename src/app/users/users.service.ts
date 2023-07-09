@@ -18,4 +18,12 @@ export class UsersService {
   getUserById(id: string): Observable<User> {
     return this.http.get<User>(this.url + id);
   }
+
+  createUser(input: {
+    email: string;
+    firstName: string;
+    lastName: string;
+  }): Observable<User> {
+    return this.http.post<User>(this.url, input);
+  }
 }
