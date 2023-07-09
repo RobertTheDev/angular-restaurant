@@ -1,32 +1,20 @@
-import db from 'db/mongodb';
 import * as express from 'express';
-import { ObjectId } from 'mongodb';
+import getUsers from './controllers/getUsers';
+import getUserById from './controllers/getUserById';
+import updateUserById from './controllers/updateUserById';
+import deleteUserById from './controllers/deleteUserById';
+import createUser from './controllers/createUser';
 
 const userRouter = express.Router();
 
-const userCollection = db.collection('users');
+userRouter.get('/', getUsers);
 
-userRouter.get('/', async (_req, res) => {
-  try {
-    const results = await userCollection.find({}).toArray();
-    res.send(results);
-  } catch (error) {
-    res.send(error);
-  }
-});
+userRouter.get('/:id', getUserById);
 
-userRouter.get('/:id', async (req, res) => {
-  try {
-    const data = await userCollection.findOne({
-      _id: new ObjectId(req.params.id),
-    });
-    if (!data) {
-      res.send(null);
-    }
-    res.send(data);
-  } catch (error) {
-    res.send(error);
-  }
-});
+userRouter.post('/', createUser);
+
+userRouter.put('/:id', updateUserById);
+
+userRouter.delete('/:id', deleteUserById);
 
 export default userRouter;
