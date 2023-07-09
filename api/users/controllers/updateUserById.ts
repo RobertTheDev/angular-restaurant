@@ -2,12 +2,14 @@ import { usersCollection } from 'db/mongodb';
 import * as express from 'express';
 import { StatusCodes } from 'http-status-codes';
 import { ObjectId } from 'mongodb';
+import updateUserSchema from '../validators/updateUserSchema';
 
 const updateUserById: express.Handler = async (req, res) => {
   try {
+    const input = updateUserSchema.parse(req.body);
     const data = await usersCollection.findOneAndUpdate(
       { _id: new ObjectId(req.params['id']) },
-      { $set: req.body },
+      { $set: input },
     );
 
     if (!data) {
