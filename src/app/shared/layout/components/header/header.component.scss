@@ -1,6 +1,5 @@
 .header {
   &-container {
-    background: white;
     height: 6rem;
     left: 0px;
     position: fixed;
@@ -12,9 +11,21 @@
   &-link {
     &-group {
       align-items: center;
+      color: #e3cdb4;
       display: flex;
+      font-size: 1.4rem;
+      font-weight: 600;
       gap: 2rem;
       height: 100%;
+      text-transform: uppercase;
     }
+  }
+  &-action-button {
+    height: 4rem;
+    background: none;
+    border: 2px solid #e3cdb4;
+    color: #e3cdb4;
+    font-size: 1.4rem;
+    font-weight: 600;
   }
 }
